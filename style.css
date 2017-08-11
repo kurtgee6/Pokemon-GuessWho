@@ -1,53 +1,74 @@
+
 body {
-    background: url("background-image.jpg");
-    height: 730px;
+    background-image: url("background-image.jpg");
 }
 
-h1 {
-    border: 3px solid white;
-    text-align: center;
-    margin-left: 150px;
-    margin-right: 150px;
-    padding: 10px;
+.gameContainer {
+    margin: 30px;
+    border: 3px solid black;
+    border-radius: 30px;
     color: white;
-    font-family: 'Days One', sans-serif;
-    font-size: 64px;
-    background-color: CornflowerBlue;
+    background-color: black;
 }
 
-.one {
+.title {
+    margin: 8px;
+    font-size: 50px;
     text-align: center;
-    font-family: 'Days One', sans-serif;
-    border: 2px solid white;
-    padding: 20px;
-    color: white;
-    height: 350px;
-    font-size: 36px;
-    background-color: CornflowerBlue;
 }
+
+.question {
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/*Image positioning*/
 
 #image {
-    width: 225px;
-    height: 300px;
+    border: 3px solid black;
+    margin: 450px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
-#buttons {
-    padding: 80px;
-    border: 2px solid white;
-    background-color: CornflowerBlue;
-    margin-top: 20px;
-    margin-right: 340px;
-    margin-left: 350px;
-    padding-bottom: 80px;
+
+/*Image Design*/
+
+#image {
+    width: 400px;
+    height: 425px;
+    border-radius: 30px;
 }
 
-.name1,
-.name2,
-.name3,
-.name4 {
-    padding: 10px;
-    margin-left: 10px;
-    width: 110px;
+#buttonHolder {
+    margin: 25px;
+}
+
+
+/*positioning*/
+
+button {
+    margin-left: 120px;
+    padding: 30px;
+    font-size: 20px;
+    width: 160px;
     text-align: center;
-    font-family: 'Days One', sans-serif;
+}
+
+
+/*design*/
+
+button {
+    color: white;
+    background-color: black;
+    border-color: white;
+    border-radius: 15px;
+}
+
+button:hover {
+    color: white;
+    background-color: palevioletred;
+    border-color: skyblue;
 }
