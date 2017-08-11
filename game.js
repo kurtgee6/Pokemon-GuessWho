@@ -54,13 +54,109 @@ $(document).ready(function () {
             choices: ["Charizard", "Pikachu", "Glalie", "Delfox"],
             answer: 1
         },
-
         {
-            name: "Jirachi",
-            image: "images/jirachi.png",
-            choices: ["Delfox", "Jirachi", "Mew", "Squirtle"],
+            name: "Abra",
+            image: "images/abra.png",
+            choices: ["Abra", "Tentacool", "Ho-Oh", "Farfetch"],
+            answer: 1
+        },
+        {
+            name: "Deoxys",
+            image: "images/deoxys.png",
+            choices: ["Delfox", "Espeon", "Kangaskgan", "Deoxys"],
+            answer: 4
+        },
+        {
+            name: "FarFetch",
+            image: "images/farfetch.jpg",
+            choices: ["Kangaskgan", "Fartfetch", "Slowpoke", "Zapdos"],
             answer: 2
-        }
+        },
+        {
+            name: "Golem",
+            image: "images/golem.jpg",
+            choices: ["Meowth", "Jirachi", "Golem", "Glalie"],
+            answer: 3
+        },
+        {
+            name: "Haunter",
+            image: "images/haunter.jpg",
+            choices: ["Haunter", "Ghastly", "Ho-Oh", "Charmander"],
+            answer: 1
+        },
+        {
+            name: "Ho-Oh",
+            image: "images/Ho-Oh.jpg",
+            choices: ["Zapdos", "Ho-Oh", "Pidgey", "Articuno"],
+            answer: 2
+        },
+        {
+            name: "Jigglypuff",
+            image: "images/jigglypuff.png",
+            choices: ["Ja'qhar", "Jirachi", "Clefairy", "Jigglypuff"],
+            answer: 4
+        },
+        {
+            name: "Kangaskhan",
+            image: "images/Kangaskhan.png",
+            choices: ["Delfox", "Kangaskgan", "Slowpoke", "Farfetch"],
+            answer: 2
+        },
+        {
+            name: "Mankey",
+            image: "images/mankey.png",
+            choices: ["Mankey", "Jirachi", "Ekans", "Tentacool"],
+            answer: 1
+        },
+        {
+            name: "Meowth",
+            image: "images/meowth.jpg",
+            choices: ["Tentacool", "Mew", "Meowth", "Onix"],
+            answer: 3
+        },
+        {
+            name: "Onix",
+            image: "images/onix.jpg",
+            choices: ["Tentacool", "Onix", "Golem", "Glalie"],
+            answer: 2
+        },
+        {
+            name: "Pidgey",
+            image: "images/pidgey.png",
+            choices: ["Pikachu", "Articuno", "Deoxys", "Pidgey"],
+            answer: 4
+        },
+        {
+            name: "Poliwag",
+            image: "images/poliwag.png",
+            choices: ["Slowpoke", "Abra", "Poliwag", "Mankey"],
+            answer: 3
+        },
+        {
+            name: "Slowpoke",
+            image: "images/slowpoke.png",
+            choices: ["Slowpoke", "Meowth", "Mew", "Delfox"],
+            answer: 1
+        },
+        {
+            name: "Snorlax",
+            image: "images/snorlax.jpg",
+            choices: ["Golem", "Glalie", "Poliwag", "Snorlax"],
+            answer: 4
+        },
+        {
+            name: "Tentacool",
+            image: "images/tentacool.png",
+            choices: ["Kangaskgan", "Tentacool", "Abra", "Fartfetch"],
+            answer: 2
+        },
+        {
+            name: "Zapdos",
+            image: "images/zapdos.jpg",
+            choices: ["Articuno", "Jirachi", "Deoxys", "Zapdos"],
+            answer: 4
+        },
+
     ];
 
     function startQuestions() {
@@ -105,11 +201,14 @@ $(document).ready(function () {
     function correctChoice() {
         //getting answer
         var answer = rand.answer;
+
+        //getting choices
         var option1 = rand.choices[0];
         var option2 = rand.choices[1];
         var option3 = rand.choices[2];
         var option4 = rand.choices[3];
 
+        //check console for checking purposes
         console.log("\n");
         console.log("---Answer---");
         console.log("The Answer is: " + answer);
@@ -120,10 +219,13 @@ $(document).ready(function () {
         console.log("The Fourth choice is: " + option4 + " || " + "4");
         console.log("\n");
 
+        //click function 
         $(".option").click(function () {
 
+            //grabbing the value from index.html
             var correct = (this.value);
 
+            //comparing to see if the user clicks the right answer
             if (answer == correct) {
                 restart();
             } else {
@@ -132,11 +234,13 @@ $(document).ready(function () {
         });
     };
 
-
+    //restarts the game
     function restart() {
+        //reloads the page
         window.location.reload();
     };
 
+    //starts the game
     function startQuestions() {
         outputImage();
         displayChoices();
