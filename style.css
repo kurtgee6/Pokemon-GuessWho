@@ -27,7 +27,7 @@ body {
 
 #image {
     border: 3px solid black;
-    margin: 540px;
+    margin: 460px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -52,7 +52,7 @@ button {
     margin-left: 120px;
     padding: 30px;
     font-size: 20px;
-    width: 210px;
+    width: 160px;
     text-align: center;
 }
 
