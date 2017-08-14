@@ -186,6 +186,8 @@ $(document).ready(function () {
     };
 
 
+
+
     //display choices that are within random object
     function displayChoices() {
 
